@@ -23,17 +23,27 @@ In 3 dimensions, the only change is that now instead of a line we will have a pl
 Perception: fit the data inside a node, and there are also nodes for inputs and output. 
 Alternative way of thinking about that is that there are weights for each input, and all of the inputs go through their weight 
 and then face the bias.
+
 Step function: 1 if the output is positive, and 0 if the output is negative.
+
 Two ways to think about the nodes: bias inside the node and bias as an input
+
 This objects are called neural network because they look like neurons in the brain which decide whether they output.
+
 AND operators: Takes two inputs and returns an output. This can also be represented as a line, where negative area returns a 0 and positive area returns 1. In this perception, we need the bias to be opposite from the weights and slightly greater in magnitude but not greater than the sum of the two weights.
+
 Perception trick: Start random, look at how badly the line is doing and move it around to get it to work better and better. We look at each point and get information from them to improve the line.
+
 Mathematical Trick: We subtract the point value from the weights which we multiply by the learning rate.Or we add them if the point is in the other area. 
+
 Error: Looking for small steps to descent and find a local minimum. We should use continuous function to know how much in percentage.In order to do this we will use sigmoid function which gives us number close to 1 and numbers close to 0, or 0.5.  This kind of function will also provide us with a percentage output instead of a number output, allows us to maybe use multiple neural networks. 
+
 Sigmoid: The continuous version of the step function, where there are small numbers instead of discrete numbers. For large numbers: close to 1, small: close to 0, 0: 0.5
-The softmax function is in charge of finding the probability of something and all the probabilities should add to 1. One way to do this is to take the score and divide it by the total and than we use the exponential function to turn the number into positive 
-So what we actually do is square each number and than divide. 
+
+The softmax function is in charge of finding the probability of something and all the probabilities should add to 1. One way to do this is to take the score and divide it by the total and than we use the exponential function to turn the number into positive so what we actually do is square each number and than divide. 
+
 One hot encoding: The process of instead of having one variable we can have n variables with one criteria where each represents either an 1 or a 0.
+
 Cross Entropy: Using the logarithm function to determine whether a mode is good or bad. Goal: minimize the cross entropy, meaning the sum of the log of all the points. What’s interesting is that the cross entropy uses probability to generate an error function using probability.
 
 Cross Entropy algorithm: the sum of yi * log(pi) + (1-yi) * log(1 - pi)

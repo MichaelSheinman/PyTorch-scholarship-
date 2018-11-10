@@ -1,19 +1,28 @@
-Lesson - 1: Introduction to Neural Networks
+# Lesson - 1: Introduction to Neural Networks
 
 Feedforward: The process neural networks use to turn input into an output.
-Deep learning is used for anything such as self-driving neural networks. 
+
 Neural Networks are programs that determine a line to classify data. However, we may need a more complex neural network for a more complex data. 
-In neural network we looks at the previous data.
-We don’t care about special cases in neural network as we are most looking to compute a line that will classify results correctly. 
+
+In neural network we look at the previous data.
+
 Example: test: x1, grades: x2. 
+
 Boundary line: 2x1 + x2 - 18 = 0. In this boundary line, anything above 0 is above the line and anything below 0 is below the lining, meaning failed. 
+
 Generally, our boundary will be an equation of the form w1x1 + w2x2 + b = 0 or, wx + b = 0. W: vector(w1, w2), x: vector(x1, x2)
+
 Label: What we are trying to predict.
+
 Each point is in form x1x2y where y is 1 for the blue 
+
 Prediction: y-hat, the neural network prediction. 1 if wx + b >= 0, 0 if wx + b < 0
+
 In 3 dimensions, the only change is that now instead of a line we will have a plan flying in 3d. For example: w1x1 + w2x2 + w3x3 + b = 0, and still wx + b = 0. So as n dimensions just the dimensions increase.
+
 Perception: fit the data inside a node, and there are also nodes for inputs and output. 
-Alternative way of thinking about that is that there are weights for each input, and all of the inputs go through their weight and then face the bias.
+Alternative way of thinking about that is that there are weights for each input, and all of the inputs go through their weight 
+and then face the bias.
 Step function: 1 if the output is positive, and 0 if the output is negative.
 Two ways to think about the nodes: bias inside the node and bias as an input
 This objects are called neural network because they look like neurons in the brain which decide whether they output.
@@ -26,11 +35,16 @@ The softmax function is in charge of finding the probability of something and al
 So what we actually do is square each number and than divide. 
 One hot encoding: The process of instead of having one variable we can have n variables with one criteria where each represents either an 1 or a 0.
 Cross Entropy: Using the logarithm function to determine whether a mode is good or bad. Goal: minimize the cross entropy, meaning the sum of the log of all the points. What’s interesting is that the cross entropy uses probability to generate an error function using probability.
+
 Cross Entropy algorithm: the sum of yi * log(pi) + (1-yi) * log(1 - pi)
+
 Multi-Class: the negative of the summation of i_equals_one to n up to the summation from y_equals_j to m Yij * log(Pij). YIJ = 1 makes sure that we are only adding the logarithm of the probabilities of the events that actually have occured.
 M: number of classes
+
 Logistic Regression algorithm: Pick a random model for the data, calculate the error(cross entropy?), minimize the error and continue doing that.
+
 Pseudo code:
+
 If y = 1:
 P(blue) = yhat
 Error = -ln(yhat)
@@ -83,6 +97,7 @@ Conclusion: in this lab four function were implemented for the gradient descent 
 The first function is the sigmoid function, which is used to change to make the value of the neural network output continues instead of discrete. Equation: 1/ (1 + e-x). I was thinking finding this function will be straightforward but I forgot parenthesis. 
 The second function is the prediction formula which I found by taking the dot product of the features(points?) and the weights and finally adding the bias.
 The next function is the error formula which is used to tell how badly is the output function doing.
+
 Finally the update weights function, I use the output formula from before to determine the error -(y - y^). Than I decrease the weights by the learn rate times the point times the error and I decrease the bias by the error times the learn rate. 
 
 

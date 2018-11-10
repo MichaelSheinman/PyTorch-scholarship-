@@ -97,3 +97,12 @@ Finally the update weights function, I use the output formula from before to det
 
 
 
+
+
+
+
+
+
+
+
+

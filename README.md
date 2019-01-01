@@ -13,3 +13,4 @@ Lesson 5: Convolutional Neural Networks
 
 Lesson 6: Style Transfer 
 1. [Notes](https://github.com/MichaelGitHubHype/PyTorch-scholarship-/blob/master/Lesson_6_Notes.ipynb)
+2. [Style Transfer](https://github.com/MichaelGitHubHype/PyTorch-scholarship-/blob/master/style.ipynb)
